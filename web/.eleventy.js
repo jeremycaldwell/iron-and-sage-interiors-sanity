@@ -22,6 +22,7 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
+  // Copy image directory over without modification.
   eleventyConfig.addPassthroughCopy("images");
 
   let markdownIt = require("markdown-it");
