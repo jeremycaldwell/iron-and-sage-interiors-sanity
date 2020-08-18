@@ -4,9 +4,10 @@ export default {
   title: 'Basic Page',
   fields: [
     {
-      name: 'name',
+      name: 'title',
       type: 'string',
-      title: 'Name'
+      title: 'Title',
+      description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
       name: 'slug',
@@ -26,7 +27,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       subtitle: 'slug.current',
       media: 'image'
     }
