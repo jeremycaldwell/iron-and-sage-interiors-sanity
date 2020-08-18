@@ -1562,20 +1562,6 @@
     es6-error "^4.0.2"
     type-of-is "^3.5.1"
 
-"@sanity/vision@^1.149.16":
-  version "1.149.16"
-  resolved "https://registry.npmjs.org/@sanity/vision/-/vision-1.149.16.tgz#154c1d3094c7ae77bc9e1ca48429e9a182fdc1bb"
-  dependencies:
-    classnames "^2.2.5"
-    codemirror "^5.47.0"
-    moment "^2.19.1"
-    query-string "^4.3.2"
-    react-codemirror2 "^6.0.0"
-    react-icon-base "^2.1.2"
-    react-json-view "^1.19.1"
-    react-spinner "^0.2.6"
-    react-split-pane "^0.1.84"
-
 "@sanity/webpack-integration@1.149.18":
   version "1.149.18"
   resolved "https://registry.npmjs.org/@sanity/webpack-integration/-/webpack-integration-1.149.18.tgz#dbaaebe19901167c7d459083176ee7867caf0654"
