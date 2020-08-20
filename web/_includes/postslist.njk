@@ -5,8 +5,17 @@
       <article data-history-node-id="7" role="article" about="{{ post.url | url }}" typeof="schema:Article" class="node node--type-article node--promoted node--view-mode-teaser">
         <div class="blog-teaser__image">
           <div class="blog-teaser__image-container">
+
+
+
+
             <a href="{{ post.url | url }}" class="blog-teaser__image-link">
-              <img src="https://picsum.photos/960/440" alt="Image" />
+
+Image here.
+
+
+
+
             </a>
           </div>
         </div>
@@ -16,6 +25,10 @@
               <h2 class="blog-teaser__title"><a href="{{ post.url | url }}">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
               <div class="blog-teaser__meta"><time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time></div>
               {{ currentPost.excerpt | markdownify | safe }}
+
+
+
+
             </div>
           </div>
         </div>
