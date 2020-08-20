@@ -1,9 +1,25 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ postslist.length + 1 }}">
-{% for post in postslist | reverse %}
-  {% set currentPost = post.data.post %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
-  </li>
-{% endfor %}
-</ol>
+<div class="blog-teaser">
+  {% for post in postslist | reverse %}
+    {% set currentPost = post.data.post %}
+    <div class="blog-teaser__row">
+      <article data-history-node-id="7" role="article" about="{{ post.url | url }}" typeof="schema:Article" class="node node--type-article node--promoted node--view-mode-teaser">
+        <div class="blog-teaser__image">
+          <div class="blog-teaser__image-container">
+            <a href="{{ post.url | url }}" class="blog-teaser__image-link">
+              <img src="https://picsum.photos/960/440" alt="Image" />
+            </a>
+          </div>
+        </div>
+        <div class="blog-teaser__container">
+          <div class="blog-teaser__inner">
+            <div class="blog-teaser__content">
+              <h2 class="blog-teaser__title"><a href="{{ post.url | url }}">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+              <div class="blog-teaser__meta"><time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time></div>
+              {{ currentPost.excerpt | markdownify | safe }}
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  {% endfor %}
+</div>
