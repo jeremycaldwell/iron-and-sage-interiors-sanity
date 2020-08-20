@@ -37,7 +37,6 @@
     "susy": "^3.0.6"
   },
   "dependencies": {
-    "eleventy-plugin-sanity-image": "^0.1.1",
     "sass": "^1.26.10"
   }
 }

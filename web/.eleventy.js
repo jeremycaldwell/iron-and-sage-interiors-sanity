@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 const util = require('util')
 const CleanCSS = require("clean-css");
-const sanityImage = require('./node_modules/eleventy-plugin-sanity-image');
+const urlFor = require('./utils/imageUrl');
 
 module.exports = function(eleventyConfig) {
 
@@ -26,8 +26,19 @@ module.exports = function(eleventyConfig) {
   // Copy image directory over without modification.
   eleventyConfig.addPassthroughCopy("images");
 
-  eleventyConfig.addPlugin(sanityImage, {
-    client: 'r6futx8n' // This is your Sanity connection object
+  // Image URL.
+  eleventyConfig.addShortcode('imageUrlFor', (image, width="400") => {
+    return urlFor(image)
+      .width(width)
+      .auto('format')
+  })
+
+  // Image URL cropped.
+  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height) => {
+    return urlFor(image)
+      .width(width)
+      .height(height)
+      .auto('format')
   })
 
   let markdownIt = require("markdown-it");
