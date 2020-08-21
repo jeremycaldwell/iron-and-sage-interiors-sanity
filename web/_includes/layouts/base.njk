@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-      {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
     <link type="text/css" rel="stylesheet" href="{{ '/' | url }}css/styles.css" media="all" />
   </head>
   <body>
     <div class="page-container">
       <header class="header" role="banner">
         <div class="region region-header-top">
-          <nav aria-labelledby="block-secondarymenu-menu" class="block block-menu navigation menu--secondary-menu" id="block-secondarymenu" role="navigation">
+          <nav aria-labelledby="menu--secondarymenu-menu" class="menu--secondary-menu" role="navigation">
             <h2 class="visually-hidden" id="block-secondarymenu-menu">Secondary menu</h2>
             <ul class="menu">
-              <li class="menu-item">
-                <a data-drupal-link-system-path="node/3" href="/contact">Contact</a>
-              </li>
-              <li class="menu-item">
-                <a data-drupal-link-system-path="node/4" href="/design-services">Design Services</a>
-              </li>
+              <li class="menu-item {{ 'is-active' if '/contact' in page.url }}"><a href="/contact">Contact</a></li>
+              <li class="menu-item {{ 'is-active' if '/design-services' in page.url }}"><a href="/design-services">Design Services</a></li>
             </ul>
           </nav>
           <section class="basic-block block-bundle" id="block-sociallistheader">
@@ -51,10 +46,10 @@
         <button aria-expanded="false" class="nav-toggle" data-toggle="collapse" type="button"><span>Toggle menu</span></button>
         <nav aria-labelledby="block-ironandsage-main-menu-menu" class="block menu--main" id="block-ironandsage-main-menu" role="navigation">
           <ul class="menu">
-            <li class="menu-item {{ 'active' if '/blog' in page.url }}"><a href="/blog">Blog</a></li>
-            <li class="menu-item {{ 'active' if '/shop-this-room' in page.url }}"><a href="/shop-this-room">Shop This Room</a></li>
-            <li class="menu-item {{ 'active' if '/favorite-shops' in page.url }}"><a href="/favorite-shops">Favorite Shops</a></li>
-            <li class="menu-item {{ 'active' if '/about' in page.url }}"><a href="/about">About</a></li>
+            <li class="menu-item {{ 'is-active' if '/blog' in page.url }}"><a href="/blog">Blog</a></li>
+            <li class="menu-item {{ 'is-active' if '/shop-this-room' in page.url }}"><a href="/shop-this-room">Shop This Room</a></li>
+            <li class="menu-item {{ 'is-active' if '/favorite-shops' in page.url }}"><a href="/favorite-shops">Favorite Shops</a></li>
+            <li class="menu-item {{ 'is-active' if '/about' in page.url }}"><a href="/about">About</a></li>
           </ul>
         </nav>
       </div>

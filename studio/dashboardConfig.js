@@ -39,7 +39,7 @@ export default {
     },
     {
       name: 'document-list',
-      options: {title: 'Recent pages', order: '_createdAt desc', types: ['page']},
+      options: {title: 'Pages', order: '_createdAt desc', types: ['basicpage']},
       layout: {width: 'small'}
     },
     {

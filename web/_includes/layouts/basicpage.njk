@@ -3,4 +3,4 @@ layout: layouts/base.njk
 templateClass: tmpl-page
 ---
 <h1>{{ basicpage.title }}</h1>
-{{ basicpage.body }}
+{{ basicpage.body | markdownify | safe }}
