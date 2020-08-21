@@ -51,9 +51,10 @@
         <button aria-expanded="false" class="nav-toggle" data-toggle="collapse" type="button"><span>Toggle menu</span></button>
         <nav aria-labelledby="block-ironandsage-main-menu-menu" class="block menu--main" id="block-ironandsage-main-menu" role="navigation">
           <ul class="menu">
-            {%- for nav in collections.nav | reverse -%}
-              <li class="menu-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
-            {%- endfor -%}
+            <li class="menu-item {{ 'active' if '/blog' in page.url }}"><a href="/blog">Blog</a></li>
+            <li class="menu-item {{ 'active' if '/shop-this-room' in page.url }}"><a href="/shop-this-room">Shop This Room</a></li>
+            <li class="menu-item {{ 'active' if '/favorite-shops' in page.url }}"><a href="/favorite-shops">Favorite Shops</a></li>
+            <li class="menu-item {{ 'active' if '/about' in page.url }}"><a href="/about">About</a></li>
           </ul>
         </nav>
       </div>

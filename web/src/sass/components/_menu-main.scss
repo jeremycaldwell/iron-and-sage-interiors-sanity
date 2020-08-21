@@ -72,9 +72,12 @@
         color: #a7aca6;
         text-decoration: none;
       }
+    }
 
-      // Active.
-      &.is-active {
+    // Active.
+    &.active {
+      a,
+      a:visited {
         color: #a7aca6;
         font-weight: 700;
       }
