@@ -21,7 +21,7 @@ export default () =>
       S.listItem()
         .title('Blog posts')
         .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
+        .child(S.documentTypeList('post').title('Blog Posts')),
       S.listItem()
         .title('Authors')
         .icon(MdPerson)
