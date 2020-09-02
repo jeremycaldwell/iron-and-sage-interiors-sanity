@@ -23,8 +23,20 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
-  // Copy image directory over without modification.
-  eleventyConfig.addPassthroughCopy("images");
+  // Copy without modification.
+  eleventyConfig.addPassthroughCopy('images');
+
+  // Copy Favicons without modification.
+  eleventyConfig.addPassthroughCopy('favicon.ico');
+  eleventyConfig.addPassthroughCopy('android-chrome-192x192.png');
+  eleventyConfig.addPassthroughCopy('android-chrome-512x512.png');
+  eleventyConfig.addPassthroughCopy('apple-touch-icon.png');
+  eleventyConfig.addPassthroughCopy('favicon-16x16.png');
+  eleventyConfig.addPassthroughCopy('favicon-32x32.png');
+  eleventyConfig.addPassthroughCopy('mstile-150x150.png');
+  eleventyConfig.addPassthroughCopy('safari-pinned-tab.svg');
+  eleventyConfig.addPassthroughCopy('browserconfig.xml');
+  eleventyConfig.addPassthroughCopy('site.webmanifest');
 
   // Image URL.
   eleventyConfig.addShortcode('imageUrlFor', (image, width="400") => {
