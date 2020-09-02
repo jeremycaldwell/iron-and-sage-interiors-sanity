@@ -3,7 +3,6 @@ const BlocksToMarkdown = require('@sanity/block-content-to-markdown')
 const client = require('../utils/sanityClient.js')
 const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
-
 const hasToken = !!client.config().token
 
 function generateBasicpage (basicpage) {
