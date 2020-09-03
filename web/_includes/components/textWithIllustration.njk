@@ -1,4 +1,17 @@
-<div>{{ component.excerpt }}</div>
-<div>{{ component.heading }}</div>
-<div>{{ component.tagline }}</div>
-<img src="{% imageUrlFor component.image, '750' %}" />
+{# Styling #}
+{# {% set css %}{% include "_site/dist/css/components/hero.css" %}{% endset %} #}
+
+{# Markup #}
+<section class="text-illustration component">
+  {# <style>{{ css | cssmin | safe }}</style> #}
+  <header class="text-illustration__content">
+    <div class="text-illustration__inner">
+      <div class="text-illustration__body">
+        <h2 class="text-illustration__title">{{ component.heading }}</h2>
+        <p class="text-illustration__tagline">{{ component.excerpt }}</p>
+        {{ tagline }}
+      </div>
+    </div>
+  </header>
+  <div class="text-illustration__image"><img src="{% imageUrlFor component.image, '750' %}" /></div>
+</section>
