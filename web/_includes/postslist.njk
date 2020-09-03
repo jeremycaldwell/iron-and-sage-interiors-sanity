@@ -1,25 +1,25 @@
-<div class="blog-teaser">
+<section class="blog-teaser">
   {% for post in postslist | reverse %}
-    {% set currentPost = post.data.post %}
+    {% set blogPost = post.data.post %}
     <div class="blog-teaser__row">
-      <article data-history-node-id="7" role="article" about="{{ post.url | url }}" typeof="schema:Article" class="node node--type-article node--promoted node--view-mode-teaser">
+      <article class="node">
         <div class="blog-teaser__image">
           <div class="blog-teaser__image-container">
             <a href="{{ post.url | url }}" class="blog-teaser__image-link">
-              <img src="{% croppedUrlFor currentPost.mainImage, 960, 440 %}" alt="{{ currentPost.mainImage.alt }}">
+              <img src="{% croppedUrlFor blogPost.mainImage, 960, 440 %}" alt="{{ blogPost.mainImage.alt }}">
             </a>
           </div>
         </div>
         <div class="blog-teaser__container">
           <div class="blog-teaser__inner">
             <div class="blog-teaser__content">
-              <h2 class="blog-teaser__title"><a href="{{ post.url | url }}">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
-              <div class="blog-teaser__meta"><time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time></div>
-              {{ currentPost.excerpt | markdownify | safe }}
+              <h2 class="blog-teaser__title"><a href="{{ post.url | url }}">{% if blogPost.title %}{{ blogPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+              <div class="blog-teaser__meta"><time datetime="{{ blogPost.publishedAt }}">{{ blogPost.publishedAt|readableDate }}</time></div>
+              {{ blogPost.excerpt | markdownify | safe }}
             </div>
           </div>
         </div>
       </article>
     </div>
   {% endfor %}
-</div>
+</section>
