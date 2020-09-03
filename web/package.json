@@ -8,7 +8,7 @@
     "dev": "npx eleventy --watch --serve",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy",
-    "sass": "sass --style=compressed src:css",
+    "sass": "sass --style=compressed src/sass:dist/css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
     "start": "npm-run-all sass --parallel watch:*"
