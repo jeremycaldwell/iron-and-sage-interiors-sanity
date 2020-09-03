@@ -33,5 +33,12 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      media: 'image',
+      title: 'heading',
+      subtitle: 'tagline'
+    },
+  },
 }
