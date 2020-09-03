@@ -1,1 +1,1 @@
-.hero{border:5px solid blue;position:relative}.hero__content{position:absolute;width:100%;background:pink}.hero__image img{display:block}/*# sourceMappingURL=hero.css.map */
+.hero{position:relative}.hero__content{left:50%;position:absolute;top:50%;transform:translate(-50%, -50%);background:rgba(0,0,0,.85);color:#fff;padding:20px;position:absolute;width:90%}.hero__image img{display:block;width:100%}/*# sourceMappingURL=hero.css.map */

@@ -4,20 +4,23 @@
 @import "../component.scss";
 
 .hero {
-  border: 5px solid blue;
   position: relative;
 }
 
 // Content.
 .hero__content {
+  @include center;
+  background: rgba($black, 85%);
+  color: $white;
+  padding: 20px;
   position: absolute;
-  width: 100%;
-  background: pink;
+  width: 90%;
 }
 
 // Image.
 .hero__image {
   img {
     display: block;
+    width: 100%;
   }
 }
