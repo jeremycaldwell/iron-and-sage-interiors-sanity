@@ -12,17 +12,11 @@ templateClass: tmpl-page
 
 
 {% for component in basicpage.pageBuilder %}
-  <hr>
-  <h2>{{ component._type }}</h2>
-  {% if component._type == 'hero' %}
-    <div>{{ component.heading }}</div>
-    <div>{{ component.tagline }}</div>
-    <div>{{ component.image }}</div>
-  {% elseif component._type == 'textWithIllustration' %}
-    <div>{{ component.excerpt }}</div>
-    <div>{{ component.heading }}</div>
-    <div>{{ component.tagline }}</div>
-    <div>{{ component.image }}</div>
+  {% set componentType = component._type %}
+  {% if componentType == 'hero' %}
+    {%- include "components/hero/hero.njk" -%}
+  {% elseif componentType == 'textWithIllustration' %}
+    {%- include "components/textwithillustration/textWithIllustration.njk" -%}
   {% endif %}
 {% endfor %}
 

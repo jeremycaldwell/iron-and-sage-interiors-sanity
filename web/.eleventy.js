@@ -24,6 +24,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Copy without modification.
+  eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('images');
 
   // Copy Favicons without modification.

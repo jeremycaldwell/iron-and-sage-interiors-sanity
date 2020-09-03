@@ -1,0 +1,23 @@
+// =============================================================================
+// HERO
+// =============================================================================
+@import "../component.scss";
+
+.hero {
+  border: 5px solid orange;
+  position: relative;
+}
+
+// Content.
+.hero__content {
+  position: absolute;
+  width: 100%;
+  background: blue;
+}
+
+// Image.
+.hero__image {
+  img {
+    display: block;
+  }
+}

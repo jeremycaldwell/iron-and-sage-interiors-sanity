@@ -8,7 +8,7 @@
     "dev": "npx eleventy --watch --serve",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy",
-    "sass": "sass --style=compressed src/sass/styles.scss _site/css/styles.css",
+    "sass": "sass --style=compressed src:css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
     "start": "npm-run-all sass --parallel watch:*"
@@ -37,6 +37,7 @@
     "susy": "^3.0.6"
   },
   "dependencies": {
+    "eleventy-plugin-sanity-image": "^0.1.1",
     "sass": "^1.26.10"
   }
 }
