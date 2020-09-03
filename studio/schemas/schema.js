@@ -20,6 +20,14 @@ import authorReference from './objects/authorReference'
 import instagram  from './objects/instagram'
 import twitter  from './objects/twitter'
 
+// Components.
+import callToAction  from './objects/callToAction'
+import form  from './objects/form'
+import hero  from './objects/hero'
+import imageGallery  from './objects/imageGallery'
+import textWithIllustration  from './objects/textWithIllustration'
+import video  from './objects/video'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -43,6 +51,12 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     instagram,
-    twitter
+    twitter,
+    callToAction,
+    form,
+    hero,
+    imageGallery,
+    textWithIllustration,
+    video,
   ])
 })

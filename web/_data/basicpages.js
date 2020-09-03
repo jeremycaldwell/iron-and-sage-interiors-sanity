@@ -13,11 +13,32 @@ function generateBasicpage (basicpage) {
 }
 
 async function getBasicpages () {
-  const filter = groq`*[_type == "basicpage"]`
-  const docs = await client.fetch(filter).catch(err => console.error(err))
-  const basicpages = docs.map(generateBasicpage)
+  const filter = groq`*[_type == "basicpage" && defined(slug)]`
+  const projection = groq`{
+    _id,
+    publishedAt,
+    title,
+    slug,
+    pageBuilder,
+    body[]{
+      ...,
+      children[]{
+        ...,
+        // Join inline reference
+        _type == "authorReference" => {
+          // check /studio/documents/authors.js for more fields
+          "name": @.author->name,
+          "slug": @.author->slug
+        }
+      }
+    },
+  }`
+  const order = `| order(publishedAt asc)`
+  const query = [filter, projection, order].join(' ')
+  const basicpages = await client.fetch(query).catch(err => console.error(err))
   const reducedBasicpages = overlayDrafts(hasToken, basicpages)
-  return reducedBasicpages
+  const prepareBasicpages = reducedBasicpages.map(generateBasicpage)
+  return prepareBasicpages
 }
 
 module.exports = getBasicpages

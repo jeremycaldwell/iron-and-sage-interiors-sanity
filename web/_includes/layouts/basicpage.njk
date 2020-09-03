@@ -6,6 +6,29 @@ templateClass: tmpl-page
 <article>
   <h1>{{ basicpage.title }}</h1>
   {{ basicpage.body | markdownify | safe }}
+
+
+
+
+
+{% for component in basicpage.pageBuilder %}
+  <hr>
+  <h2>{{ component._type }}</h2>
+  {% if component._type == 'hero' %}
+    <div>{{ component.heading }}</div>
+    <div>{{ component.tagline }}</div>
+    <div>{{ component.image }}</div>
+  {% elseif component._type == 'textWithIllustration' %}
+    <div>{{ component.excerpt }}</div>
+    <div>{{ component.heading }}</div>
+    <div>{{ component.tagline }}</div>
+    <div>{{ component.image }}</div>
+  {% endif %}
+{% endfor %}
+
+
+
+
 </article>
 
 <script>

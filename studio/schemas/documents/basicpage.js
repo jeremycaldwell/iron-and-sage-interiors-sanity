@@ -1,5 +1,3 @@
-import {format} from 'date-fns'
-
 export default {
   name: 'basicpage',
   type: 'document',
@@ -25,6 +23,19 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'pageBuilder',
+      type: 'array',
+      title: 'Page builder',
+      of: [
+        { type: 'hero' },
+        { type: 'textWithIllustration' },
+        { type: 'callToAction' },
+        { type: 'gallery' },
+        { type: 'form' },
+        { type: 'video' },
+      ]
     }
   ],
   orderings: [
