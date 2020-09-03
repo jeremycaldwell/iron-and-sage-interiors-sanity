@@ -19,7 +19,7 @@ export default {
                 },
                 {
                   buildHookId: '5f3b4268534d5d47b885d503',
-                  title: 'Blog Website',
+                  title: 'Website',
                   name: 'iron-and-sage-interiors-sanity',
                   apiId: 'bde1490e-3331-4107-8696-974fa39f560b'
                 }
@@ -39,7 +39,7 @@ export default {
     },
     {
       name: 'document-list',
-      options: {title: 'Pages', order: '_createdAt desc', types: ['basicpage']},
+      options: {title: 'Pages', order: 'title asc', types: ['basicpage']},
       layout: {width: 'small'}
     },
     {
