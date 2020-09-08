@@ -47,9 +47,5 @@ export default {
       options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
       layout: {width: 'medium'}
     },
-    {
-      name: 'notes',
-      layout: {width: 'large'}
-    }
   ]
 }
