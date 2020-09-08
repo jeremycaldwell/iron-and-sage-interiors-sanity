@@ -47,10 +47,11 @@ module.exports = function(eleventyConfig) {
   })
 
   // Image URL cropped.
-  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height) => {
+  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height, quality) => {
     return urlFor(image)
       .width(width)
       .height(height)
+      .quality(quality)
       .auto('format')
   })
 
