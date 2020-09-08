@@ -5,8 +5,16 @@
       <article class="node">
         <div class="blog-teaser__image">
           <div class="blog-teaser__image-container">
-            <a href="{{ post.url | url }}" class="blog-teaser__image-link">
-              <img src="{% croppedUrlFor blogPost.mainImage, 1920, 880, 100 %}" alt="{{ blogPost.mainImage.alt }}">
+            <a href="{{ post.url | url }}" class="blog-teaser__image-link" tabindex="-1">
+              <figure class="image">
+                <picture>
+                  <!--[if IE 9]><video style="display: none;"><![endif]-->
+                  <source srcset="{% croppedUrlFor blogPost.mainImage, 960, 440, 100 %} 1x, {% croppedUrlFor blogPost.mainImage, 1920, 880, 100 %} 2x" media="(min-width: 1020px)" type="image/jpeg">
+                  <source srcset="{% croppedUrlFor blogPost.mainImage, 670, 200, 100 %} 1x, {% croppedUrlFor blogPost.mainImage, 1340, 400, 100 %} 2x" type="image/jpeg">
+                  <!--[if IE 9]></video><![endif]-->
+                  <img src="{% croppedUrlFor blogPost.mainImage, 960, 440, 100 %}" alt="{% if blogPost.mainImage.alt %}{{ blogPost.mainImage.alt }}{% else %}{{ blogPost.title ~ ' cover image' }}{% endif %}" typeof="foaf:Image" loading="lazy">
+                </picture>
+              </figure>
             </a>
           </div>
         </div>
