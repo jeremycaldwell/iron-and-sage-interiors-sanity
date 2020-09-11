@@ -40,7 +40,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('site.webmanifest');
 
   // Image URL.
-  eleventyConfig.addShortcode('imageUrlFor', (image, width="400") => {
+  eleventyConfig.addShortcode('imageUrlFor', (image, width="400",quality) => {
     return urlFor(image)
       .width(width)
       .quality(quality)
@@ -48,7 +48,7 @@ module.exports = function(eleventyConfig) {
   })
 
   // Image URL cropped.
-  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height, quality) => {
+  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height,quality) => {
     return urlFor(image)
       .width(width)
       .height(height)
