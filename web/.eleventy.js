@@ -43,6 +43,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode('imageUrlFor', (image, width="400") => {
     return urlFor(image)
       .width(width)
+      .quality(quality)
       .auto('format')
   })
 
