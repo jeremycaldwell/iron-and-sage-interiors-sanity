@@ -21,8 +21,17 @@
         <div class="blog-teaser__container">
           <div class="blog-teaser__inner">
             <div class="blog-teaser__content">
-              <h2 class="blog-teaser__title"><a href="{{ post.url | url }}">{% if blogPost.title %}{{ blogPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
-              <div class="blog-teaser__meta"><time datetime="{{ blogPost.publishedAt }}">{{ blogPost.publishedAt|readableDate }}</time></div>
+              <h2 class="blog-teaser__title">
+                <a href="{{ post.url | url }}">
+                  {% if blogPost.title %}{{ blogPost.title }}
+                  {% else %}
+                    <code>{{ post.url }}</code>
+                  {% endif %}
+                </a>
+              </h2>
+              <div class="blog-teaser__meta">
+                <time datetime="{{ blogPost.publishedAt }}">{{ blogPost.publishedAt|readableDate }}</time>
+              </div>
               {{ blogPost.excerpt | markdownify | safe }}
             </div>
           </div>

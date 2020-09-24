@@ -7,7 +7,6 @@ $bp-hero-full:        1600px;
 $bp-hero-large-full:  ($bp-large + 1) $bp-hero-full;
 
 .hero {
-  background-color: lighten(red, 65);
   height: 350px;
   margin-top: -40px;
   max-height: 500px;

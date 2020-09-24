@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Baskervville:ital@1&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ '/' | url }}dist/css/style.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="{{ '/' | url }}dist/css/style.css" media="all"/>
   </head>
   <body>
     <div class="page-container">
@@ -22,56 +22,76 @@
           <nav aria-labelledby="menu--secondarymenu-menu" class="menu--secondary-menu" role="navigation">
             <h2 class="visually-hidden" id="block-secondarymenu-menu">Secondary menu</h2>
             <ul class="menu">
-              <li class="menu-item {{ 'is-active' if '/contact' in page.url }}"><a href="/contact">Contact</a></li>
-              <li class="menu-item {{ 'is-active' if '/design-services' in page.url }}"><a href="/design-services">Design Services</a></li>
+              <li class="menu-item {{ 'is-active' if '/contact' in page.url }}">
+                <a href="/contact">Contact</a>
+              </li>
+              <li class="menu-item {{ 'is-active' if '/design-services' in page.url }}">
+                <a href="/design-services">Design Services</a>
+              </li>
             </ul>
           </nav>
           <section class="basic-block block-bundle" id="block-sociallistheader">
             <div class="basic-block__content">
               <ul class="social-list social-list--header">
                 <li class="social-list__instagram">
-                  <a href="https://www.instagram.com/ironandsageinteriors" rel="noopener noreferrer" target="_blank" title="Instagram"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg> <span class="social-list__text">Instagram</span></a>
+                  <a href="https://www.instagram.com/ironandsageinteriors" rel="noopener noreferrer" target="_blank" title="Instagram">
+                    <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                    </svg>
+                    <span class="social-list__text">Instagram</span></a>
                 </li>
                 <li class="social-list__pinterest">
-                  <a href="https://www.pinterest.com/valeriecaldwelli" rel="noopener noreferrer" target="_blank" title="Pinterest"><svg height="32" version="1.1" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"></path></svg><span class="social-list__text">Pinterest</span></a>
+                  <a href="https://www.pinterest.com/valeriecaldwelli" rel="noopener noreferrer" target="_blank" title="Pinterest">
+                    <svg height="32" version="1.1" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"></path>
+                    </svg>
+                    <span class="social-list__text">Pinterest</span></a>
                 </li>
               </ul>
             </div>
           </section>
         </div>
-        <div class="region region-header">
+        <div class="region-header">
           <div class="container">
-            <div class="block block-system block-system-branding-block" id="block-ironandsage-branding">
+            <div class="block-system-branding-block">
               <a class="site-logo" href="{{ '/' | url }}" rel="home"><img alt="Home" src="{{ '/' | url }}images/logo.svg"></a>
             </div>
           </div>
         </div>
       </header>
 
-      <div class="region region-navigation">
-        <button aria-expanded="false" class="nav-toggle" data-toggle="collapse" type="button"><span>Toggle menu</span></button>
-        <nav aria-labelledby="block-ironandsage-main-menu-menu" class="block menu--main" id="block-ironandsage-main-menu" role="navigation">
+      <div class="region-navigation">
+        <button aria-expanded="false" class="nav-toggle" data-toggle="collapse" type="button">
+          <span>Toggle menu</span></button>
+        <nav class="menu--main" role="navigation">
           <ul class="menu">
-            <li class="menu-item {{ 'is-active' if '/blog' in page.url }}"><a href="/blog">Blog</a></li>
-            <li class="menu-item {{ 'is-active' if '/shop-this-room' in page.url }}"><a href="/shop-this-room">Shop This Room</a></li>
-            <li class="menu-item {{ 'is-active' if '/favorite-shops' in page.url }}"><a href="/favorite-shops">Favorite Shops</a></li>
-            <li class="menu-item {{ 'is-active' if '/about' in page.url }}"><a href="/about">About</a></li>
+            <li class="menu-item {{ 'is-active' if '/blog' in page.url }}">
+              <a href="/blog">Blog</a>
+            </li>
+            <li class="menu-item {{ 'is-active' if '/shop-this-room' in page.url }}">
+              <a href="/shop-this-room">Shop This Room</a>
+            </li>
+            <li class="menu-item {{ 'is-active' if '/favorite-shops' in page.url }}">
+              <a href="/favorite-shops">Favorite Shops</a>
+            </li>
+            <li class="menu-item {{ 'is-active' if '/about' in page.url }}">
+              <a href="/about">About</a>
+            </li>
           </ul>
         </nav>
       </div>
 
       <div class="layout-container">
-        <main id="main" {% if templateClass %} class="main {{ templateClass }}"{% endif %} role="main">
-          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+        <main id="main" {% if templateClass %} class="main {{ templateClass }}" {% endif %} role="main">
+          <a id="main-content" tabindex="-1"></a>
+          {# link is in html.html.twig #}
           {{ content | safe }}
         </main>
       </div>
 
       <footer class="footer" role="contentinfo">
         <div class="container">
-          Copyright © 2020 Iron and Sage Interiors
+          &copy; 2020 Iron and Sage Interiors
         </div>
       </footer>
     </div>
