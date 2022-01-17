@@ -7,10 +7,18 @@ export default {
   },
   fields: [
     {
+      name: 'caption',
+      type: 'string',
+      title: 'Caption',
+      options: {
+        isHighlighted: true
+      }
+    },
+    {
       name: 'alt',
       type: 'string',
       title: 'Alternative text',
-      description: 'Important for SEO and accessiblity.',
+      description: 'Important for accessiblity and SEO.',
       validation: Rule => Rule.error('You have to fill out the alternative text.').required(),
       options: {
         isHighlighted: true
@@ -19,7 +27,8 @@ export default {
   ],
   preview: {
     select: {
-      imageUrl: 'asset.url'
+      imageUrl: 'asset.url',
+      title: 'caption'
     }
   }
 }

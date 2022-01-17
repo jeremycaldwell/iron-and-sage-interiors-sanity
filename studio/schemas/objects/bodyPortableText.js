@@ -50,9 +50,6 @@ export default {
       options: {hotspot: true}
     },
     {
-      type: 'twitter'
-    },
-    {
       type: 'instagram'
     }
   ]

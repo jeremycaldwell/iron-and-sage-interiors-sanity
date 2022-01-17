@@ -1,6 +1,6 @@
 export default {
   widgets: [
-    { name: 'structure-menu' },
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
@@ -39,23 +39,20 @@ export default {
             value: 'https://github.com/jeremycaldwell/iron-and-sage-interiors-sanity',
             category: 'Code'
           },
-          {
-            title: 'Frontend',
-            value: 'https://iron-and-sage-interiors-sanity.netlify.app',
-            category: 'apps'
-          }
+          {title: 'Frontend', value: 'https://iron-and-sage-interiors-sanity.netlify.app', category: 'apps'}
         ]
       }
     },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: { title: 'Pages', order: 'title asc', types: ['basicpage'] },
-      layout: { width: 'small' }
+      options: {title: 'Pages', order: 'title asc', types: ['basicpage']},
+      layout: {width: 'small'}
     },
     {
       name: 'document-list',
-      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
-      layout: { width: 'medium' }
+      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      layout: {width: 'small'}
     }
   ]
 }
